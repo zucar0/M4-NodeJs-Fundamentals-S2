@@ -2,20 +2,15 @@ const path=require('path');
 //Importación del módulo fs
  const fs = require('fs');
 
- fs.writeFile(path.join(__dirname,'/ejemplo4.txt'),'Este es el texto 4', {encoding:'utf-8'},(err)=>{
-     if(err) throw err;
-     console.log('¡Archivo creado!');
- });
+//Sincrono
 
-
+ fs.writeFileSync(path.join(__dirname,'/ej1.txt'),'Este es el texto 1', {encoding:'utf-8'});
+ console.log('writeFileSync: ','¡Archivo creado!');
+ 
 //Lectura del archivo
-fs.readFile(path.join(__dirname,'/ejemplo4.txt'), {encoding:'utf-8'},(err, data)=>{
-    if(err) return console.log (err);
-    console.log('Leer archivo: ', data);
-});
+data=fs.readFileSync(path.join(__dirname,'/ej1.txt'), {encoding:'utf-8'});
+console.log('readFileSync: ', data);
 
 //Agregar información a un archivo ya creado
-fs.appendFile(path.join(__dirname, '/ejemplo4.txt'), '\nSegunda línea', {encoding: 'utf-8'}, (err)=> {
-    if(err) throw err;
-    console.log('Archivo actualizado.')
-})
+fs.appendFileSync(path.join(__dirname, '/ej1.txt'), '\nSegunda línea');
+    console.log('appendFile: ','Archivo actualizado.');
