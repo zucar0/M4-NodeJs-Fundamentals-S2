@@ -1,0 +1,21 @@
+{
+  "name": "M4-NodeJs-Fundamentals-S2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zucar0/M4-NodeJs-Fundamentals-S2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zucar0/M4-NodeJs-Fundamentals-S2/issues"
+  },
+  "homepage": "https://github.com/zucar0/M4-NodeJs-Fundamentals-S2#readme"
+}
