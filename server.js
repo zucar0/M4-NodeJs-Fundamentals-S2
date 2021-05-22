@@ -1,11 +1,14 @@
-// console.log(__di rname);
-//Importar el módulo de http (Ya viene instalado con los módulos de node)
-const http = require('http');
-//Se crea el servidor que recibe una función
-let server = http.createServer(function(req, res){
-    res.end('¡Hola, mundo!')
-})
-//Servidor que dentro lleva una funcion
-server.listen(3000, function(){
-    console.log("Servidor corriendo en", 3000); 
-})
+const path=require('path');
+//Importación del módulo fs
+ const fs = require('fs');
+
+ fs.writeFile(path.join(__dirname,'/ejemplo2.txt'),'Este es el texto dos', {encoding:'utf-8'},(err)=>{
+     if(err) throw err;
+     console.log('¡Archivo creado!');
+ });
+
+ fs.writeFile(path.join(__dirname,'/ejemplo2.pdf'),'Este es el texto dos', {encoding:'utf-8'},(err)=>{
+    if(err) throw err;
+    console.log('¡Archivo creado!');
+});
+
